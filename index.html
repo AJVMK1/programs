@@ -32,6 +32,12 @@
 <button onclick="calculatediv()">Calculate Division</button>
 <p>Result: <span id="dresult"></span></p>
 
+<h2>Find the Remainder</h2>
+<input type="number" id="rnum1" placeholder="Enter First Number">
+<input type="number" id="rnum2" placeholder="Enter Second Number">
+<button onclick="calculateRemainder()">Find Remainder</button>
+<p>Result: <span id="rresult"></span></p>
+
 <script>
   function calculateSum() {
     let num1 = parseFloat(document.getElementById('num1').value);
@@ -67,6 +73,14 @@
     let divide = dnum1 / dnum2;
 
     document.getElementById('dresult').textContent = divide;
+  }
+
+  
+  function calculateRemainder() {
+    let rnum1 = parseFloat(document.getElementById('rnum1').value);
+    let rnum2 = parseFloat(document.getElementById('rnum2').value);
+    let remainder = rnum1 % rnum2;
+    document.getElementById('rresult').textContent = remainder;
   }
 </script>
 
